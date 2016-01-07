@@ -7,5 +7,20 @@
     "gulp-cssmin": "0.1.7",
     "gulp-uglify": "1.2.0",
     "rimraf": "2.2.8"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    },
+    "dependencies": {
+      "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
+      "react": "npm:react@^0.14.5",
+      "react-dom": "npm:react-dom@^0.14.5"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }

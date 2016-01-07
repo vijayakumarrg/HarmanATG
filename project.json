@@ -23,7 +23,10 @@
   },
 
   "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel"
+    "web": "Microsoft.AspNet.Server.Kestrel",
+    "development": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Development",
+    "staging": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Staging",
+    "production": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Production"
   },
 
   "frameworks": {
@@ -44,7 +47,13 @@
     "**.vspscc"
   ],
   "scripts": {
-     "prepublish": [
+    "postrestore": [
+      "npm install",
+      "bower install",
+      "jspm install",
+      "jspm bundle-sfx app/main wwwroot/app.js"
+    ],
+    "prepublish": [
       "npm install",
       "bower install",
       "gulp clean",
