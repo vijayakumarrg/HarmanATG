@@ -26,7 +26,7 @@
     "web": "Microsoft.AspNet.Server.Kestrel",
     "development": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Development",
     "staging": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Staging",
-    "production": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Production"
+    "production": "Microsoft.AspNet.Server.Kestrel --ASPNET_ENV Production --server.urls http://ubuntu1228.cloudapp.net:5000"
   },
 
   "frameworks": {
