@@ -49,7 +49,7 @@
   "scripts": {
     "postrestore": [
       "npm install",
-      "bower install",
+      "bower install --alow-root",
       "jspm install",
       "jspm bundle-sfx app/main wwwroot/app.js"
     ],
